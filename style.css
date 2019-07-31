@@ -62,6 +62,11 @@ body {
   display: inline-block;
 }
 
+figure {
+  width: 15rem;
+  height: 8rem;
+  overflow: hidden;
+}
 img {
   border: #e44100 4px dotted;
   border-radius: 4px;
