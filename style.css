@@ -12,28 +12,29 @@ header {
 }
 
 h2 { /*screen-heading*/
+    display:inline-block;
     font-size: 5.1rem;
     color: #ff4900;
-    margin: 0 0 -1.7rem 1.7rem;
+    margin: 0 0 1.7rem 1.7rem;
     font-family: 'Lobster', cursive;
     /* source:https://wpshout.com/quick-guides/create-text-outline-css/ */
     text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535, 1px 1px 0 #353535;
 }
 
 h3 { /*card-title*/
-    font-size: 1.7rem;
+    max-width: 14rem;
+    font-size: 22.1px;
     color: #ff4900;
     font-family: 'Questrial', sans-serif;
     text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535, 1px 1px 0 #353535;
 }
 
 h4 { /*sub-heading*/
-    font-size: rem;
+    font-size: 1.7rem;
     color: white;
     background-color: #70554a;
     padding-left: 1.7rem;
-    border-top: #ff4900 2px solid;
-    border-bottom: #ff4900 2px solid;
+    border-bottom: #ff4900 5.1px solid;
     margin-top: -3.4rem;
     font-family: 'Questrial', sans-serif;
     text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535, 1px 1px 0 #353535;
@@ -48,44 +49,52 @@ body {
 
 .screen {
     background-color: white;
-    border: solid #ff4900 2px;
+    border: solid #ff4900 8.5px;
     color: #353535;
-    padding: 1.7rem 0;
-    margin: 0 0 1.7rem 1.7rem;
-    max-width: 22.1in;
+    padding: 1.7rem 0 5.1rem 5.1rem;
+    margin: 3.4rem auto 3.4rem auto;
+    max-width: 13.6in;
+    box-shadow: #70554a 1.7rem 1.7rem;
+}
+
+.icons{
+    background-color:white;
+    padding:1.7rem;
+    border-top: solid #ff4900 5.1px;
 }
 
 .card {
-    border: #E44100 4px dotted;
+    border: #E44100 5.1px dotted;
     border-radius: 4px;
-    margin: 1.7rem;
     display: inline-block;
+    width:14rem;
+    margin:1.7%;
+    padding:1.7px;
 }
 
 figure {
-  width: 15rem;
-  height: 8rem;
+  width: 13rem;
+  height: 7rem;
   overflow: hidden;
+  border-radius:4px;
+  justify-content: space-around;
 }
-img {
-  border: #e44100 4px dotted;
-  border-radius: 4px;
-}
+
 
     .card:hover {
         border: #E44100 4px solid;
-        box-shadow: #70554a 3px;
+        box-shadow: #70554a 3.4px;
         cursor: pointer;
     }
 
-.card-body {
-    background-color: #353535;
-}
-
 .flex-box {
-    display: inline-flexbox;
-    justify-content: space-evenly;
-    margin: 10px;
+    display: flex;
+    justify-content: space-between left;
+    flex-wrap: wrap;
+
+    /* padding:0 auto 0 auto;
+    margin:0 auto 0 auto; */
+
     /* background-color:#ff4900;
     border-radius:4px; */
     max-width: 13.6in;
