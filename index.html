@@ -1,132 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FoodTruckFinder.</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>FoodTruckFinder.</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Questrial&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <header>
+      <h1>FoodTruckFinder.</h1>
+      <h4>
+        <i class="fa fa-truck" aria-hidden="true"></i>
+        Go mobile with food
+      </h4>
+    </header>
+    <div id="search-screen" class="container screen">
+      <h2>Pick a Spot!</h2>
+      <br />
 
-<body>
-  <header>
-    <h1>FoodTruckFinder.</h1>
-    <h4>
-      <i class="fa fa-truck" aria-hidden="true"></i>
-      Go mobile with food
-    </h4>
-  </header>
-  <div id="search-screen" class="container screen">
-    <h2>Pick a Spot!</h2>
-    <br>
-
-
-    <div class="flex-box">
+      <div class="flex-box">
         <div class="card" id="location-card">
           <figure>
-            <img src="Images/central-square-cambridge.jpg" class="card-img-top" alt="..." />
+            <img
+              src="Images/central-square-cambridge.jpg"
+              class="card-img-top"
+              alt="..."
+            />
           </figure>
-            <h3 class="card-title" id="location-name">Central Square</h3>
-        </div> <!--end card-->
-
+          <h3 class="card-title" id="location-name">Central Square</h3>
+        </div>
+        <!--end card-->
 
         <div class="card" id="location-card">
           <figure>
             <img src="Images/backbay.jpg" class="card-img-top" alt="..." />
           </figure>
-            <h3 class="card-title" id="location-name">Back Bay</h3>
+          <h3 class="card-title" id="location-name">Back Bay</h3>
         </div>
 
         <div class="card" id="location-card">
           <figure>
             <img src="Images/aquarium.jpg" class="card-img-top" alt="..." />
           </figure>
-            <h3 class="card-title" id="location-name">Aquarium</h3>
+          <h3 class="card-title" id="location-name">Aquarium</h3>
         </div>
 
         <div class="card" id="location-card">
           <figure>
             <img src="Images/kenmore.jpg" class="card-img-top" alt="..." />
           </figure>
-            <h3 class="card-title" id="location-name">Kenmore</h3>
+          <h3 class="card-title" id="location-name">Kenmore</h3>
         </div>
 
-    <!-- <br>
+        <!-- <br>
     <br> -->
         <div class="card" id="location-card">
           <figure>
             <img src="Images/eastboston.jpg" class="card-img-top" alt="..." />
           </figure>
-            <h3 class="card-title" id="location-name">East Boston</h3>
+          <h3 class="card-title" id="location-name">East Boston</h3>
         </div>
 
         <div class="card" id="location-card">
           <figure>
             <img src="Images/southstation.jpg" class="card-img-top" alt="..." />
           </figure>
-            <h3 class="card-title" id="location-name">South Station</h3>
+          <h3 class="card-title" id="location-name">South Station</h3>
         </div>
 
         <div class="card" id="location-card">
           <figure>
             <img src="Images/copley.png" class="card-img-top" alt="..." />
           </figure>
-            <h3 class="card-title" id="location-name">Copley</h3>
+          <h3 class="card-title" id="location-name">Copley</h3>
         </div>
 
         <div class="card" id="location-card">
           <figure>
             <img src="Images/northeastern.jpg" class="card-img-top" alt="..." />
           </figure>
-            <h3 class="card-title" id="location-name">Northeastern</h3>
+          <h3 class="card-title" id="location-name">Northeastern</h3>
         </div>
       </div>
-    </div><!--end of the search-screen-->
-
-    <br>
-    <br>
-
-
-
-  <div class="container-fluid screen" id="display-screen">
-    <div class="row">
-    <h2>Inserted based on button</h2>
-  </div>
-    <div class="row">
-    <div class="col-md-8">
-      <h3>FOOD TRUCKS</h3>
     </div>
+    <!--end of the search-screen-->
 
-    <div class="col-md-4">
-      <h3>WEATHER</h3>
+    <br />
+    <br />
+
+    <div class="container-fluid screen" id="display-screen">
+      <div class="row">
+        <h2>Inserted based on button</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <h3>FOOD TRUCKS</h3>
+        </div>
+
+        <div class="col-md-4">
+          <h3>WEATHER</h3>
+        </div>
+      </div>
+      <!--end row-->
     </div>
-  </div><!--end row-->
+    <!--end display-screen-->
 
-  </div><!--end display-screen-->
-
-  <div class="icons">
+    <div class="icons">
       <strong>
         Icons made by
-        <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>
+        <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy"
+          >Dave Gandy</a
+        >
         from
-        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
         is licensed by
-        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
-          BY</a>
+        <a
+          href="http://creativecommons.org/licenses/by/3.0/"
+          title="Creative Commons BY 3.0"
+          target="_blank"
+          >CC 3.0 BY</a
+        >
       </strong>
-    <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a
-        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
-        href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+      <div>
+        Icons made by
+        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons"
+          >Smashicons</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+        is licensed by
+        <a
+          href="http://creativecommons.org/licenses/by/3.0/"
+          title="Creative Commons BY 3.0"
+          target="_blank"
+          >CC 3.0 BY</a
+        >
+      </div>
     </div>
-  </div><!--end icons-->
-    <script type="text/javascript" src="Untitled-1.js"></script>
-</body>
-
+    <!--end icons-->
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>
