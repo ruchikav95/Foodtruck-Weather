@@ -1,4 +1,6 @@
 //
+var foodtruckResponse
+var weatherResponse
 
 $.ajax({
   url:
