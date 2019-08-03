@@ -25,9 +25,26 @@ var centralCambridge={
     temperature:"",
     wind:"",
 
-    xCoordinate:0,
-    yCoordinate:0,
+    xCoordinate:42.36541,
+    yCoordinate:-71.103802,
     foodTruckNames:["Tom", "bob", "sam"],
+    foodTruckLocations:[],
+    foodTruckHours:[],
+    foodTruckLink:[],
+    foodTruckPinpoint:[]
+};
+
+var southStationBoston={
+    name: "South Station",
+    city:"Boston",
+    clouds:"",
+    precipitation:"",
+    temperature:"",
+    wind:"",
+
+    yCoordinate:42.3519,
+    xCoordinate:-71.0551,
+    foodTruckNames:[],
     foodTruckLocations:[],
     foodTruckHours:[],
     foodTruckLink:[],
@@ -35,38 +52,46 @@ var centralCambridge={
 }
 
 
+
 var records;
+var maxX, maxY, minX, minY;
 
 function findFoodTrucks(location){
 
-    console.log(location.name);
     $.ajax({
         url: "https://data.boston.gov/api/3/action/datastore_search?resource_id=9960513f-1a7f-4f02-847c-553e7c8a60f7",
         dataType:'jsonp',
         cache: true,
         method: "GET"
        }).then(function(response) {
-        document.write(JSON.stringify(response));
+        // document.write(JSON.stringify(response));
         records=response.result.records;
-        console.log(response);
-       });
+    maxX=parseFloat(location.xCoordinate)+.005;
+    minX=parseFloat(location.xCoordinate)-.005;
 
-    for (var i=0;i<records.length();i++){
-    if ((location.xCoordinate+.001===records[i].x||location.xCoordinate-.001===records[i].x)&&(location.yCoordinate+.001===records[i].y||location.yCoordinate-.001===records[i].y))
-    {
-        location.foodTruckLocations.push(records.Location);
-        location.foodTruckNames.push(records.Truck);
-        location.foodTruckHours.push(records.Hours);
-        location.foodTruckLink.push(records.Link);
-        location.foodTruckPinpoint.push(records.Pinpoint);
+    maxY=parseFloat(location.yCoordinate)+.005;
+    minY=parseFloat(location.yCoordinate)-.005;
+
+    console.log(records[0].y + " "+maxY);
+    for (var i=0;i<records.length;i++){
+        if ((records[i].x<=maxX&&records[i].x>=minX)&&(records[i].y<=maxY&&records[i].y>=minY))
+        {
+        location.foodTruckLocations.push(records[i].Location);
+        location.foodTruckNames.push(records[i].Truck);
+        location.foodTruckHours.push(records[i].Hours);
+        location.foodTruckLink.push(records[i].Link);
+        location.foodTruckPinpoint.push(records[i].Pinpoint);
     }
     }
+    console.log(location.foodTruckNames);
+});
+
 }
 
 function findWeather(location){
 
 }
-console.log(centralCambridge.name);
+
 
 function openDisplay(location){
     $("#search-screen").hide();
@@ -78,9 +103,15 @@ function openDisplay(location){
 }
 
 $("#central-cambridge").on("click", function(){
-    console.log(centralCambridge.foodTruckNames.length);
     openDisplay(centralCambridge);
     for (var i=0; i<centralCambridge.foodTruckNames.length;i++){
-        $("#food-trucks").after("<p>"+centralCambridge.foodTruckNames[i]+"</p>")
+        $("#food-trucks").append("<p>"+centralCambridge.foodTruckNames[i]+"</p>");
+    }
+});
+
+$("#south-station-boston").on("click", function(){
+    openDisplay(southStationBoston);
+    for (var i=0; i<southStationBoston.foodTruckNames.length;i++){
+        $("#food-trucks").append("<p>"+southStationBoston.foodTruckNames[i]+"</p>");
     }
 });

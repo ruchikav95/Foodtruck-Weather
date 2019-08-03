@@ -11,6 +11,10 @@ header {
     background-color: white;
 }
 
+p{
+    display:block;
+}
+
 h2 { /*screen-heading*/
     display:inline-block;
     font-size: 5.1rem;
