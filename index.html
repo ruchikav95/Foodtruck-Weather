@@ -1,98 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>FoodTruckFinder.</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FoodTruckFinder.</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Questrial&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <header>
-    <h1>FoodTruckFinder.</h1>
-    <h4>
-      <i class="fa fa-truck" aria-hidden="true"></i>
-      Go mobile with food
-    </h4>
-  </header>
-  <div id="search-screen" class="container screen">
-    <h2>Pick a Spot!</h2>
-    <br>
+  <body>
+    <header>
+      <h1>FoodTruckFinder.</h1>
+      <h4>
+        <i class="fa fa-truck" aria-hidden="true"></i>
+        Go mobile with food
+      </h4>
+    </header>
+    <div id="search-screen" class="container screen">
+      <h2>Pick a Spot!</h2>
+      <br />
 
-
-    <div class="flex-box">
+      <div class="flex-box">
         <div class="card" id="location-card">
-          <div  id="central-cambridge">
-          <figure>
-            <img
-              src="Images/central-square-cambridge.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-          </figure>
-          <h3 class="card-title" id="location-name">Central Square</h3>
-        </div>
-        </div>
-        <!--end card-->
-
-        <div class="card" id="location-card back-bay-boston">
-          <figure>
-            <img src="Images/backbay.jpg" class="card-img-top" alt="..." />
-          </figure>
-          <h3 class="card-title" id="location-name">Back Bay</h3>
+          <div id="back-bay-boston">
+            <figure>
+              <img src="Images/backbay.jpg" class="card-img-top" alt="..." />
+            </figure>
+            <h3 class="card-title" id="location-name">Back Bay</h3>
+          </div>
         </div>
 
-        <div class="card" id="location-card aquarium-boston">
-          <figure>
-            <img src="Images/aquarium.jpg" class="card-img-top" alt="..." />
-          </figure>
-          <h3 class="card-title" id="location-name">Aquarium</h3>
+        <div class="card" id="location-card">
+          <div id="aquarium-boston">
+            <figure>
+              <img src="Images/aquarium.jpg" class="card-img-top" alt="..." />
+            </figure>
+            <h3 class="card-title" id="location-name">Aquarium</h3>
+          </div>
         </div>
 
-        <div class="card" id="location-card kenmore-boston">
-          <figure>
-            <img src="Images/kenmore.jpg" class="card-img-top" alt="..." />
-          </figure>
-          <h3 class="card-title" id="location-name">Kenmore</h3>
+        <div class="card" id="location-card">
+          <div id="kenmore-boston">
+            <figure>
+              <img src="Images/kenmore.jpg" class="card-img-top" alt="..." />
+            </figure>
+            <h3 class="card-title" id="location-name">Kenmore</h3>
+          </div>
         </div>
 
         <!-- <br>
-    <br> -->
-        <div class="card" id="location-card east-boston">
-          <figure>
-            <img src="Images/eastboston.jpg" class="card-img-top" alt="..." />
-          </figure>
-          <h3 class="card-title" id="location-name">East Boston</h3>
+      <br> -->
+        <div class="card" id="location-card">
+          <div id="east-boston">
+            <figure>
+              <img src="Images/eastboston.jpg" class="card-img-top" alt="..." />
+            </figure>
+            <h3 class="card-title" id="location-name">East Boston</h3>
+          </div>
         </div>
 
         <div class="card" id="location-card">
-            <div  id="south-station-boston">
-          <figure>
-            <img src="Images/southstation.jpg" class="card-img-top" alt="..." />
-          </figure>
-          <h3 class="card-title" id="location-name">South Station</h3>
-        </div>
-        </div>
-
-        <div class="card" id="location-card copley-boston">
-          <figure>
-            <img src="Images/copley.png" class="card-img-top" alt="..." />
-          </figure>
-          <h3 class="card-title" id="location-name">Copley</h3>
+          <div id="south-station-boston">
+            <figure>
+              <img
+                src="Images/southstation.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+            </figure>
+            <h3 class="card-title" id="location-name">South Station</h3>
+          </div>
         </div>
 
-        <div class="card" id="location-card northeastern-boston">
-          <figure>
-            <img src="Images/northeastern.jpg" class="card-img-top" alt="..." />
-          </figure>
-          <h3 class="card-title" id="location-name">Northeastern</h3>
+        <div class="card" id="location-card">
+          <div id="copley-boston">
+            <figure>
+              <img src="Images/copley.png" class="card-img-top" alt="..." />
+            </figure>
+            <h3 class="card-title" id="location-name">Copley</h3>
+          </div>
+        </div>
+
+        <div class="card" id="location-card">
+          <div id="northeastern-boston">
+            <figure>
+              <img
+                src="Images/northeastern.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+            </figure>
+            <h3 class="card-title" id="location-name">Northeastern</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -155,9 +170,10 @@
     </div>
     <!--end icons-->
     <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
