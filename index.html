@@ -28,7 +28,8 @@
 
 
     <div class="flex-box">
-        <div class="card" id="location-card central-cambridge">
+        <div class="card" id="location-card">
+          <div  id="central-cambridge">
           <figure>
             <img
               src="Images/central-square-cambridge.jpg"
@@ -37,6 +38,7 @@
             />
           </figure>
           <h3 class="card-title" id="location-name">Central Square</h3>
+        </div>
         </div>
         <!--end card-->
 
@@ -98,10 +100,10 @@
     <br />
     <div class="container-fluid screen" id="display-screen">
       <div class="row">
-        <h2>Inserted based on button</h2>
+        <h2 id="display-header">Inserted based on button</h2>
       </div>
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8" id="food-trucks">
           <h3>FOOD TRUCKS</h3>
         </div>
 
@@ -150,6 +152,10 @@
       </div>
     </div>
     <!--end icons-->
-    <script type="text/javascript" src="main.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
