@@ -1,110 +1,115 @@
-h1 { /*main-heading*/
-    font-family: 'Lobster', cursive;
-    color: #E44100;
-    font-size: 13.6rem;
-    margin: 0 0 1.7rem -1.7rem;
-    letter-spacing: -.5rem;
-    text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+h1 {
+  /*main-heading*/
+  font-family: "Lobster", cursive;
+  color: #e44100;
+  font-size: 8.5rem;
+  margin: 0 0 1.7rem 1.7rem;
+  letter-spacing: -0.5rem;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
+    2px 2px 0 white;
 }
 
 header {
-    background-color: white;
+  background-color: white;
 }
 
-p{
-    display:block;
+p {
+  display: block;
 }
 
-h2 { /*screen-heading*/
-    display:inline-block;
-    font-size: 5.1rem;
-    color: #ff4900;
-    margin: 0 0 1.7rem 1.7rem;
-    font-family: 'Lobster', cursive;
-    /* source:https://wpshout.com/quick-guides/create-text-outline-css/ */
-    text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535, 1px 1px 0 #353535;
+h2 {
+  /*screen-heading*/
+  display: inline-block;
+  font-size: 3.4rem;
+  color: #70554a;
+  margin: 0 0 1.7rem 0;
+  font-family: "Lobster", cursive;
+  /* source:https://wpshout.com/quick-guides/create-text-outline-css/ */
+  text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535,
+    1px 1px 0 #353535;
 }
 
-h3 { /*card-title*/
-    max-width: 14rem;
-    font-size: 22.1px;
-    color: #ff4900;
-    font-family: 'Questrial', sans-serif;
-    text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535, 1px 1px 0 #353535;
+h3 {
+  /*card-title*/
+  max-width: 14rem;
+  font-size: 22.1px;
+  color: #ff4900;
+  font-weight: bold;
+  font-family: "Questrial", sans-serif;
 }
 
-h4 { /*sub-heading*/
-    font-size: 1.7rem;
-    color: white;
-    background-color: #70554a;
-    padding-left: 1.7rem;
-    border-bottom: #ff4900 5.1px solid;
-    margin-top: -3.4rem;
-    font-family: 'Questrial', sans-serif;
-    text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535, 1px 1px 0 #353535;
+h4 {
+  /*sub-heading*/
+  font-size: 1.7rem;
+  color: white;
+  background-color: #70554a;
+  padding: 0.1rem 1.7rem;
+  border-bottom: #ff4900 1.7px solid;
+  margin-top: -3.4rem;
+  font-family: "Questrial", sans-serif;
+  text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535,
+    1px 1px 0 #353535;
 }
-
-
 
 body {
-    background: url("images/background-image.png");
-    border: #70554a 1px solid;
+  background: url("images/background-image.png");
+  border: #70554a 1px solid;
 }
 
 .screen {
-    background-color: white;
-    border: solid #ff4900 8.5px;
-    color: #353535;
-    padding: 1.7rem 0 5.1rem 5.1rem;
-    margin: 3.4rem auto 3.4rem auto;
-    max-width: 13.6in;
-    box-shadow: #70554a 1.7rem 1.7rem;
+  background-color: white;
+  border: solid #ff4900 3.4px;
+  color: #353535;
+  padding: 1.7rem 0 5.1rem 5.1rem;
+  margin: 3.4rem auto 3.4rem auto;
+  max-width: 13.6in;
+  box-shadow: #70554a 1.7rem 1.7rem;
 }
 
-.icons{
-    background-color:white;
-    padding:1.7rem;
-    border-top: solid #ff4900 5.1px;
+.icons {
+  background-color: white;
+  padding: 1.7rem;
+  border-top: solid #ff4900 5.1px;
 }
 
 .card {
-    border: #E44100 5.1px dotted;
-    border-radius: 4px;
-    display: inline-block;
-    width:14rem;
-    margin:1.7%;
-    padding:1.7px;
+  border: #e44100 5.1px dotted;
+  border-radius: 4px;
+  display: inline-block;
+  width: 14rem;
+  margin: 1.7%;
+  padding: 1.7px;
 }
 
 figure {
-  width: 13rem;
+  width: 100%;
   height: 7rem;
   overflow: hidden;
-  border-radius:4px;
+  border-radius: 4px;
   justify-content: space-around;
 }
 
-
-    .card:hover {
-        border: #E44100 4px solid;
-        box-shadow: #70554a 3.4px;
-        cursor: pointer;
-    }
+.card:hover {
+  border: #e44100 4px solid;
+  box-shadow: #70554a 3.4px;
+  cursor: pointer;
+}
 
 .flex-box {
-    display: flex;
-    justify-content: space-between left;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between left;
+  flex-wrap: wrap;
 
-    /* padding:0 auto 0 auto;
-    margin:0 auto 0 auto; */
+  /* padding:0 auto 0 auto;
+    margin:0 auto 0 auto;
+    display: flex */
 
-    /* background-color:#ff4900;
+  /* background-color:#ff4900;
     border-radius:4px; */
-    max-width: 13.6in;
+  max-width: 13.6in;
 }
 
 .card-title {
-    padding: 0;
-    text-align: center;
+  padding: 0;
+  text-align: center;
 }
