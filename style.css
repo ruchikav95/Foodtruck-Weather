@@ -9,13 +9,6 @@ h1 {
     2px 2px 0 white;
 }
 
-header {
-  background-color: white;
-}
-
-p {
-  display: block;
-}
 
 h2 {
   /*screen-heading*/
@@ -51,9 +44,46 @@ h4 {
     1px 1px 0 #353535;
 }
 
+h5 {
+  margin:1.7rem 1.7rem 1.7rem 0;
+  padding:1.7rem;
+  border:solid 1.7px #70554a;
+  border-radius:4px;
+  color:#e44100;
+  text-align:center;
+  font-family: "Questrial", sans-serif;
+  min-height:100%;
+}
+
+header {
+  background-color: white;
+}
+
+p {
+  display: block;
+}
+
+
 body {
   background: url("images/background-image.png");
   border: #70554a 1px solid;
+  font-family:"Questrial", sans-serif;
+}
+
+figure {
+  width: 100%;
+  height: 7rem;
+  overflow: hidden;
+  border-radius: 4px;
+  justify-content: space-around;
+}
+
+a{
+  color:#70554a;
+}
+
+a:hover{
+  color:#ff4900;
 }
 
 .screen {
@@ -81,14 +111,6 @@ body {
   padding: 1.7px;
 }
 
-figure {
-  width: 100%;
-  height: 7rem;
-  overflow: hidden;
-  border-radius: 4px;
-  justify-content: space-around;
-}
-
 .card:hover {
   border: #e44100 4px solid;
   box-shadow: #70554a 3.4px;
@@ -112,4 +134,32 @@ figure {
 .card-title {
   padding: 0;
   text-align: center;
+}
+
+.button{
+  cursor:pointer;
+  float:right;
+  margin:0 1.7rem 0 0;
+
+}
+
+.button:hover{
+  border:1.7px #70554a dotted;
+  border-radius:4px;
+  padding:3.4px;
+}
+
+#food-truck-card{
+  border:1.7px solid #e44100;
+  border-radius:4px;
+  cursor:pointer;
+  margin:1.7rem 1.7rem 1.7rem 0;
+  padding:1.7rem;
+}
+
+#weather{
+  border:1.7px solid #e44100;
+  border-radius:4px;
+  margin:1.7rem 1.7rem 1.7rem 0;
+  padding:1.7rem;
 }
