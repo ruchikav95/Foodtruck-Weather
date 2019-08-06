@@ -18,6 +18,7 @@ var backBayBoston = {
   foodTruckHours: [],
   foodTruckLink: [],
   foodTruckPinpoint: [],
+  foodTruckDays:[],
 
   resetLocation: function(){
     this.weather.description= "";
@@ -31,6 +32,7 @@ var backBayBoston = {
     this.foodTruckHours= [];
     this.foodTruckLink= [];
     this.foodTruckPinpoint= [];
+    this.foodTruckDays=[];
     }
 };
 
@@ -52,6 +54,7 @@ var aquariumBoston = {
   foodTruckHours: [],
   foodTruckLink: [],
   foodTruckPinpoint: [],
+  foodTruckDays:[],
 
   resetLocation: function(){
     this.weather.description= "";
@@ -65,6 +68,7 @@ var aquariumBoston = {
     this.foodTruckHours= [];
     this.foodTruckLink= [];
     this.foodTruckPinpoint= [];
+    this.foodTruckDays=[];
     }
 };
 
@@ -86,6 +90,7 @@ var kenmoreBoston = {
   foodTruckHours: [],
   foodTruckLink: [],
   foodTruckPinpoint: [],
+  foodTruckDays:[],
 
   resetLocation: function(){
     this.weather.description= "";
@@ -99,6 +104,7 @@ var kenmoreBoston = {
     this.foodTruckHours= [];
     this.foodTruckLink= [];
     this.foodTruckPinpoint= [];
+    this.foodTruckDays=[];
     }
 };
 
@@ -120,6 +126,7 @@ var eastBoston = {
   foodTruckHours: [],
   foodTruckLink: [],
   foodTruckPinpoint: [],
+  foodTruckDays:[],
 
   resetLocation: function(){
     this.weather.description= "";
@@ -133,6 +140,7 @@ var eastBoston = {
     this.foodTruckHours= [];
     this.foodTruckLink= [];
     this.foodTruckPinpoint= [];
+    this.foodTruckDays=[];
     }
 };
 
@@ -154,6 +162,7 @@ var southStationBoston = {
   foodTruckHours: [],
   foodTruckLink: [],
   foodTruckPinpoint: [],
+  foodTruckDays:[],
 
   resetLocation: function(){
     this.weather.description= "";
@@ -167,6 +176,7 @@ var southStationBoston = {
     this.foodTruckHours= [];
     this.foodTruckLink= [];
     this.foodTruckPinpoint= [];
+    this.foodTruckDays=[];
     }
 };
 
@@ -188,6 +198,7 @@ var copleyBoston = {
   foodTruckHours: [],
   foodTruckLink: [],
   foodTruckPinpoint: [],
+  foodTruckDays:[],
 
   resetLocation: function(){
     this.weather.description= "";
@@ -201,6 +212,7 @@ var copleyBoston = {
     this.foodTruckHours= [];
     this.foodTruckLink= [];
     this.foodTruckPinpoint= [];
+    this.foodTruckDays=[];
     }
 };
 
@@ -222,6 +234,7 @@ var northeasternBoston = {
   foodTruckHours: [],
   foodTruckLink: [],
   foodTruckPinpoint: [],
+  foodTruckDays:[],
 
   resetLocation: function(){
     this.weather.description= "";
@@ -235,6 +248,7 @@ var northeasternBoston = {
     this.foodTruckHours= [];
     this.foodTruckLink= [];
     this.foodTruckPinpoint= [];
+    this.foodTruckDays=[];
     }
 };
 
@@ -272,6 +286,7 @@ function findFoodTrucks(location) {
         if(location.foodTruckHours.indexOf(records[i].Hours)<0){
         location.foodTruckHours.push(records[i].Hours);
         }
+        location.foodTruckDays.push(records[i].Day);
         location.foodTruckLink.push(records[i].Link);
         location.foodTruckPinpoint.push(records[i].Pinpoint);
       }
@@ -285,7 +300,7 @@ function findFoodTrucks(location) {
   else {
     console.log(location.foodTruckNames.length);
   for (var i=0;i<location.foodTruckNames.length;i++){
-  $("#food-trucks").append("<a href='"+location.foodTruckLink[i]+"'><div id='food-truck-card'><h3>"+location.foodTruckNames[i]+"</h3><p>"+location.foodTruckPinpoint[i]+", "+location.foodTruckLocations[i]+"</p><p>"+location.foodTruckHours+"</p></div></a>");
+  $("#food-trucks").append("<a href='"+location.foodTruckLink[i]+"'><div id='food-truck-card'><h3>"+location.foodTruckNames[i]+"</h3><p>"+location.foodTruckPinpoint[i]+", "+location.foodTruckLocations[i]+"</p><p>"+location.foodTruckDays[i]+": "+location.foodTruckHours+"</p></div></a>");
   }
   }
   });
