@@ -1,28 +1,12 @@
-//ajax for food trucks and weather
-// $.ajax({
-//   url:
-//     "https://data.boston.gov/api/3/action/datastore_search?resource_id=9960513f-1a7f-4f02-847c-553e7c8a60f7",
-//   method: "GET"
-// }).then(function(response) {
-//   document.write(JSON.stringify(response));
-// });
-
-// $.ajax({
-//     url: "https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=74694f219dec1ad3f001b89fcece53c7",
-//     method: "GET"
-//    }).then(function(response) {
-//     weatherResponse=response;
-//     console.log(response);
-//     console.log(response.Runtime);
-//    });
-
+//the following are our location objects: they hold food truck 
+//and weather information for each clickable location
 var backBayBoston = {
   name: "Back Bay",
   city: "Boston",
   weather: {
     description: "",
     icon: "",
-    temperature: "",
+    temperature: 0,
     humidity: "",
     tempMax: "",
     tempMin: ""
@@ -33,7 +17,21 @@ var backBayBoston = {
   foodTruckLocations: [],
   foodTruckHours: [],
   foodTruckLink: [],
-  foodTruckPinpoint: []
+  foodTruckPinpoint: [],
+
+  resetLocation: function(){
+    this.weather.description= "";
+    this.weather.icon= "";
+    this.weather.temperature= 0;
+    this.weather.humidity= "";
+    this.weather.tempMax= "";
+    this.weather.tempMin= "";
+    this.foodTruckNames= [];
+    this.foodTruckLocations= [];
+    this.foodTruckHours= [];
+    this.foodTruckLink= [];
+    this.foodTruckPinpoint= [];
+    }
 };
 
 var aquariumBoston = {
@@ -42,7 +40,7 @@ var aquariumBoston = {
   weather: {
     description: "",
     icon: "",
-    temperature: "",
+    temperature: 0,
     humidity: "",
     tempMax: "",
     tempMin: ""
@@ -53,7 +51,21 @@ var aquariumBoston = {
   foodTruckLocations: [],
   foodTruckHours: [],
   foodTruckLink: [],
-  foodTruckPinpoint: []
+  foodTruckPinpoint: [],
+
+  resetLocation: function(){
+    this.weather.description= "";
+    this.weather.icon= "";
+    this.weather.temperature= 0;
+    this.weather.humidity= "";
+    this.weather.tempMax= "";
+    this.weather.tempMin= "";
+    this.foodTruckNames= [];
+    this.foodTruckLocations= [];
+    this.foodTruckHours= [];
+    this.foodTruckLink= [];
+    this.foodTruckPinpoint= [];
+    }
 };
 
 var kenmoreBoston = {
@@ -62,7 +74,7 @@ var kenmoreBoston = {
   weather: {
     description: "",
     icon: "",
-    temperature: "",
+    temperature: 0,
     humidity: "",
     tempMax: "",
     tempMin: ""
@@ -73,7 +85,21 @@ var kenmoreBoston = {
   foodTruckLocations: [],
   foodTruckHours: [],
   foodTruckLink: [],
-  foodTruckPinpoint: []
+  foodTruckPinpoint: [],
+
+  resetLocation: function(){
+    this.weather.description= "";
+    this.weather.icon= "";
+    this.weather.temperature= 0;
+    this.weather.humidity= "";
+    this.weather.tempMax= "";
+    this.weather.tempMin= "";
+    this.foodTruckNames= [];
+    this.foodTruckLocations= [];
+    this.foodTruckHours= [];
+    this.foodTruckLink= [];
+    this.foodTruckPinpoint= [];
+    }
 };
 
 var eastBoston = {
@@ -82,7 +108,7 @@ var eastBoston = {
   weather: {
     description: "",
     icon: "",
-    temperature: "",
+    temperature: 0,
     humidity: "",
     tempMax: "",
     tempMin: ""
@@ -93,7 +119,21 @@ var eastBoston = {
   foodTruckLocations: [],
   foodTruckHours: [],
   foodTruckLink: [],
-  foodTruckPinpoint: []
+  foodTruckPinpoint: [],
+
+  resetLocation: function(){
+    this.weather.description= "";
+    this.weather.icon= "";
+    this.weather.temperature= 0;
+    this.weather.humidity= "";
+    this.weather.tempMax= "";
+    this.weather.tempMin= "";
+    this.foodTruckNames= [];
+    this.foodTruckLocations= [];
+    this.foodTruckHours= [];
+    this.foodTruckLink= [];
+    this.foodTruckPinpoint= [];
+    }
 };
 
 var southStationBoston = {
@@ -102,7 +142,7 @@ var southStationBoston = {
   weather: {
     description: "",
     icon: "",
-    temperature: "",
+    temperature: 0,
     humidity: "",
     tempMax: "",
     tempMin: ""
@@ -113,7 +153,21 @@ var southStationBoston = {
   foodTruckLocations: [],
   foodTruckHours: [],
   foodTruckLink: [],
-  foodTruckPinpoint: []
+  foodTruckPinpoint: [],
+
+  resetLocation: function(){
+    this.weather.description= "";
+    this.weather.icon= "";
+    this.weather.temperature= 0;
+    this.weather.humidity= "";
+    this.weather.tempMax= "";
+    this.weather.tempMin= "";
+    this.foodTruckNames= [];
+    this.foodTruckLocations= [];
+    this.foodTruckHours= [];
+    this.foodTruckLink= [];
+    this.foodTruckPinpoint= [];
+    }
 };
 
 var copleyBoston = {
@@ -122,7 +176,7 @@ var copleyBoston = {
   weather: {
     description: "",
     icon: "",
-    temperature: "",
+    temperature: 0,
     humidity: "",
     tempMax: "",
     tempMin: ""
@@ -133,7 +187,21 @@ var copleyBoston = {
   foodTruckLocations: [],
   foodTruckHours: [],
   foodTruckLink: [],
-  foodTruckPinpoint: []
+  foodTruckPinpoint: [],
+
+  resetLocation: function(){
+    this.weather.description= "";
+    this.weather.icon= "";
+    this.weather.temperature= 0;
+    this.weather.humidity= "";
+    this.weather.tempMax= "";
+    this.weather.tempMin= "";
+    this.foodTruckNames= [];
+    this.foodTruckLocations= [];
+    this.foodTruckHours= [];
+    this.foodTruckLink= [];
+    this.foodTruckPinpoint= [];
+    }
 };
 
 var northeasternBoston = {
@@ -142,7 +210,7 @@ var northeasternBoston = {
   weather: {
     description: "",
     icon: "",
-    temperature: "",
+    temperature: 0,
     humidity: "",
     tempMax: "",
     tempMin: ""
@@ -153,12 +221,28 @@ var northeasternBoston = {
   foodTruckLocations: [],
   foodTruckHours: [],
   foodTruckLink: [],
-  foodTruckPinpoint: []
+  foodTruckPinpoint: [],
+
+  resetLocation: function(){
+    this.weather.description= "";
+    this.weather.icon= "";
+    this.weather.temperature= 0;
+    this.weather.humidity= "";
+    this.weather.tempMax= "";
+    this.weather.tempMin= "";
+    this.foodTruckNames= [];
+    this.foodTruckLocations= [];
+    this.foodTruckHours= [];
+    this.foodTruckLink= [];
+    this.foodTruckPinpoint= [];
+    }
 };
 
+//here we define global variables for our findFoodTrucks() function
 var records;
 var maxX, maxY, minX, minY;
-
+//here we define our findFoodTrucks() function. 
+//It finds the food trucks within a designated distance from the specified location
 function findFoodTrucks(location) {
   $.ajax({
     url:
@@ -167,51 +251,93 @@ function findFoodTrucks(location) {
     cache: true,
     method: "GET"
   }).then(function(response) {
-    // document.write(JSON.stringify(response));
+    //shorthand
     records = response.result.records;
+
+    //specified coordinate box
     maxX = parseFloat(location.xCoordinate) + 0.005;
     minX = parseFloat(location.xCoordinate) - 0.005;
-
     maxY = parseFloat(location.yCoordinate) + 0.005;
     minY = parseFloat(location.yCoordinate) - 0.005;
 
-    console.log(records[0].y + " " + maxY);
+    //searching API for food trucks in coordinate box
     for (var i = 0; i < records.length; i++) {
       if (
-        records[i].x <= maxX &&
-        records[i].x >= minX &&
-        (records[i].y <= maxY && records[i].y >= minY)
+        (records[i].x <= maxX && records[i].x >= minX) &&
+        (records[i].y <= maxY && records[i].y >= minY) &&
+        (location.foodTruckNames.indexOf(records[i].Truck)<0)
       ) {
         location.foodTruckLocations.push(records[i].Location);
         location.foodTruckNames.push(records[i].Truck);
+        if(location.foodTruckHours.indexOf(records[i].Hours)<0){
         location.foodTruckHours.push(records[i].Hours);
+        }
         location.foodTruckLink.push(records[i].Link);
         location.foodTruckPinpoint.push(records[i].Pinpoint);
       }
     }
-    console.log(location.foodTruckNames);
+
+      //here we are displaying the food trucks in the location
+  //when there are none, the program apologizes that there are none
+  if (location.foodTruckNames.length===0){
+    $("#food-trucks").append("<div> <h5>Sorry.. There are no trucks here right now!</h5> </div>");
+  }
+  else {
+    console.log(location.foodTruckNames.length);
+  for (var i=0;i<location.foodTruckNames.length;i++){
+  $("#food-trucks").append("<a href='"+location.foodTruckLink[i]+"'><div id='food-truck-card'><h3>"+location.foodTruckNames[i]+"</h3><p>"+location.foodTruckPinpoint[i]+", "+location.foodTruckLocations[i]+"</p><p>"+location.foodTruckHours+"</p></div></a>");
+  }
+  }
   });
 }
 
+//global variable for findWeather()
+var weather;
+//here we're defining the findWeather() function
+//it finds the weather based on the city the location resides in
+//would definitely be more profound if we used locations outside of boston
 function findWeather(location) {
-  var weather = location.weather;
-  console.log(location.weather);
+  //shorthand
+  weather = location.weather;
   $.ajax({
     url:
-      "https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=74694f219dec1ad3f001b89fcece53c7",
+      "https://api.openweathermap.org/data/2.5/weather?q="+location.city+"&appid=74694f219dec1ad3f001b89fcece53c7",
     dataType: "jsonp",
     cache: true,
     method: "GET"
   }).then(function(response) {
-    weather.description = response.weather.description;
-    console.log(response);
-    weather.icon = response.weather.icon;
+    //copying values into OUR object
+    weather.description = response.weather[0].main+", "+response.weather[0].description;
     weather.temperature = response.main.temp;
     weather.humidity = response.main.humidity;
     weather.tempMin = response.main.temp_min;
     weather.tempMax = response.main.temp_max;
+    
+      //here we are displaying the weather in the location's city
+  $("#weather").append("<h2>"+parseInt(((weather.temperature)-273.15)*9/5 + 32)+"°F"+"</h2>");
+  $("#weather").append("<p>"+weather.description+"</p>");
+  $("#weather").append("<p>"+weather.humidity+"% Humidity</p>");
+  $("#weather").append("<h3> Min: "+parseInt(((weather.tempMin)-273.15)*9/5 + 32)+"°F"+"</h3>");
+  $("#weather").append("<h3> Max: "+parseInt(((weather.tempMax)-273.15)*9/5 + 32)+"°F"+"</h3>");
   });
 }
+
+function reset(){
+$("#display-screen").hide();
+$("#search-screen").show();
+$("#food-trucks").html("");
+$("#weather").html("");
+
+backBayBoston.resetLocation();
+aquariumBoston.resetLocation();
+kenmoreBoston.resetLocation();
+eastBoston.resetLocation();
+southStationBoston.resetLocation();
+northeasternBoston.resetLocation();
+copleyBoston.resetLocation();
+}
+
+
 
 function openDisplay(location) {
   $("#search-screen").hide();
@@ -223,53 +349,35 @@ function openDisplay(location) {
 
 $("#back-bay-boston").on("click", function() {
   openDisplay(backBayBoston);
-  for (var i = 0; i < backBayBoston.foodTruckNames.length; i++) {
-    $("#food-trucks").append("<p>" + backBayBoston.foodTruckNames[i] + "</p>");
-  }
 });
 
 $("#aquarium-boston").on("click", function() {
   openDisplay(aquariumBoston);
-  for (var i = 0; i < aquariumBoston.foodTruckNames.length; i++) {
-    $("#food-trucks").append("<p>" + aquariumBoston.foodTruckNames[i] + "</p>");
-  }
 });
 
 $("#kenmore-boston").on("click", function() {
   openDisplay(kenmoreBoston);
-  for (var i = 0; i < kenmoreBoston.foodTruckNames.length; i++) {
-    $("#food-trucks").append("<p>" + kenmoreBoston.foodTruckNames[i] + "</p>");
-  }
 });
 
 $("#east-boston").on("click", function() {
   openDisplay(eastBoston);
-  for (var i = 0; i < eastBoston.foodTruckNames.length; i++) {
-    $("#food-trucks").append("<p>" + eastBoston.foodTruckNames[i] + "</p>");
-  }
 });
 
 $("#south-station-boston").on("click", function() {
   openDisplay(southStationBoston);
-  for (var i = 0; i < southStationBoston.foodTruckNames.length; i++) {
-    $("#food-trucks").append(
-      "<p>" + southStationBoston.foodTruckNames[i] + "</p>"
-    );
-  }
 });
 
 $("#copley-boston").on("click", function() {
   openDisplay(copleyBoston);
-  for (var i = 0; i < copleyBoston.foodTruckNames.length; i++) {
-    $("#food-trucks").append("<p>" + copleyBoston.foodTruckNames[i] + "</p>");
-  }
 });
 
 $("#northeastern-boston").on("click", function() {
   openDisplay(northeasternBoston);
-  for (var i = 0; i < northeasternBoston.foodTruckNames.length; i++) {
-    $("#food-trucks").append(
-      "<p>" + northeasternBoston.foodTruckNames[i] + "</p>"
-    );
-  }
 });
+
+$("#back-button").on("click", function(){
+  reset();
+});
+
+//when page loads, we only want the search screen to show
+$("#display-screen").hide();
